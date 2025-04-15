@@ -1,0 +1,32 @@
+[
+	{
+		"_id": "6bac8511-052b-4d02-b574-303190a2de5f", 
+		"name": "Kermit",
+		"favorite-color": "green"
+	},
+	{
+		"_id": "51e0a00a-f1ac-4071-b9f3-06b0dc11a2a5",
+		"name": "Mario",
+		"favorite-color": "red"
+	},
+	{
+		"_id": "b6d27108-e030-471f-a865-20d402383409",
+		"name": "Ellen Ripley",
+		"favorite-color": "violet"
+	},
+	{
+		"_id": "d559525b-db14-4173-a55b-f9d584adb58d",
+		"name": "Gandalf the Grey",
+		"favorite-color": "grey"
+	},
+	{
+		"_id": "593c801d-cf3e-4ad7-9d98-3d3d0ae510aa",
+		"name": "Darth Vader",
+		"favorite-color": "black"
+	},
+	{
+		"_id": "b04ce8a4-fadf-42e1-a184-e019295c8923",
+		"name":"Samus Aran",
+		"favorite-color": "dodgerblue"
+	}
+]
