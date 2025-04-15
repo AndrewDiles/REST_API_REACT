@@ -1,26 +1,34 @@
 const { v4 } = require('uuid');
 const users = require("./initial_users.json");
 
+// Simulating the delay expected with a database
+
+const delayedResponse = (res, status, body) => {
+	setTimeout(()=>{
+		res.status(status).json({...body, status})
+	}, Math.random()*1000 + 500)
+}
+
+
 const getUsers = (req, res) => {
-	res.status(200).json({status: 200, users})
+	delayedResponse(res, 200, {users});
 }
 
 const addUser = (req, res) => {
-
 	// validation of incoming data in body
 
 	if (!req.body) {
-		return res.status(400).json({status: 400, error: "Request must include a body."})
+		return delayedResponse(res, 400, {error: "Request must include a body."});
 	}
 
 	const name = req.body.name;
 	const favColor = req.body["favorite-color"];
 
 	if (!name || typeof name !== "string") {
-		return res.status(400).json({status: 400, error: "body must include a key \"name\" of type String."})
+		return delayedResponse(res, 400, {error: "body must include a key \"name\" of type String."});
 	}
 	if (!favColor || typeof favColor !== "string") {
-		return res.status(400).json({status: 400, error: "body must include a key \"favorite-color\" of type String."})
+		return delayedResponse(res, 400, {error: "body must include a key \"favorite-color\" of type String."});
 	}
 
 	// verify if the user with incoming name is already present
@@ -28,7 +36,7 @@ const addUser = (req, res) => {
 	const userAlreadyExists = users.find(user=>user.name === name);
 
 	if (userAlreadyExists) {
-		return res.status(409).json({status: 409, error: `A user named ${name} already exists.`})
+		return delayedResponse(res, 409, {error: `A user named ${name} already exists.`});
 	}
 
 	// validation passes, create new user and respond with new information
@@ -41,7 +49,7 @@ const addUser = (req, res) => {
 
 	users.push(newUser)
 
-	res.status(201).json({status: 201, inserted_id: newUser._id})
+	delayedResponse(res, 201, {inserted_id: newUser._id});
 }
 
 module.exports = {
