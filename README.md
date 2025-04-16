@@ -4,7 +4,7 @@
 
 An API allows two applications communicate with each other.
 
-REST is a set of standards for communication.
+REST is a set of guidelines for designing networked applications.
 
 **RE**presentational: basic data type (JSON/XML).
 **S**tateless: requests contain all information required to perform action.
