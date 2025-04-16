@@ -47,6 +47,8 @@ If you pass `fetch` a relative path, React will `fetch` to its own server, and r
 
 ## Demonstration:
 
+(to be shipped on _solution_ branch)
+
 - Start up the (API) Express Server
 - Start up the React environment
 - **GET** the users from the `/v1/users` endpoint
