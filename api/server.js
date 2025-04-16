@@ -17,9 +17,9 @@ app.use((req, res, next)=>{
 // parses Content-Type of application/json into JS object in request's body
 app.use(express.json())
 
-app.get("/api/users", getUsers);
+app.get("/v1/users", getUsers);
 
-app.post("/api/user", addUser);
+app.post("/v1/users", addUser);
 
 app.use((req, res) => {
 	res.status(404).json({status: 404, message:"This isn't the endpoint you're looking for. Double check your URL and METHOD."})

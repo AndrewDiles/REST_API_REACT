@@ -13,7 +13,7 @@ Execute the command `yarn start` from within the `/api` folder.
 You can quickly test an endpoint in your browser at:
 
 
-[GET the users at http://localhost:8042/api/users](http://localhost:8042/api/users)
+[GET the users at http://localhost:8042/v1/users](http://localhost:8042/v1/users)
 
 ## The Data
 
@@ -33,7 +33,7 @@ These users are held in memory, resetting alongside the server.
 
 ## The Endpoints
 
-### GET `/api/users`
+### GET `/v1/users`
 
 Response object:
 
@@ -44,7 +44,7 @@ Response object:
 }
 ```
 
-### POST `/api/user`
+### POST `/v1/users`
 
 Expected body:
 

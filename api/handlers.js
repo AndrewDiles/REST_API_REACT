@@ -2,11 +2,13 @@ const { v4 } = require('uuid');
 const users = require("./initial_users.json");
 
 // Simulating the delay expected with a database
+const MIN_DELAY_TIME = 2500;
+const MAX_DELAY_TIME = 4000;
 
 const delayedResponse = (res, status, body) => {
 	setTimeout(()=>{
 		res.status(status).json({...body, status})
-	}, Math.random()*1000 + 500)
+	}, Math.random()*(MAX_DELAY_TIME-MIN_DELAY_TIME) + MIN_DELAY_TIME)
 }
 
 
