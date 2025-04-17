@@ -7,7 +7,9 @@ An API allows two applications communicate with each other.
 REST is a set of guidelines for designing networked applications.
 
 **RE**presentational: basic data type (JSON/XML).
+
 **S**tateless: requests contain all information required to perform action.
+
 **T**ransfer: happens via the HTTP methods (several other means exist)
 
 An API is **REST**ful if it follows these guidelines.
@@ -47,10 +49,10 @@ If you pass `fetch` a relative path, React will `fetch` to its own server, and r
 
 ## Demonstration:
 
-(to be shipped on _solution_ branch)
-
 - Start up the (API) Express Server
 - Start up the React environment
 - **GET** the users from the `/v1/users` endpoint
 - Render them using the `<Users>` component
-- Create a component to **POST** a new user.
+- **POST** a new user using the `<AddAUser>` component
+
+(to be shipped on _solution_ branch)
